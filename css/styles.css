@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;0,900;1,500&display=swap");
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+  background-color: #e0e8ff;
+  font-family: "Red Hat Display", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  padding: 2em;
+  background-image: url("../img/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+main .card {
+  max-width: 35em;
+  background-color: white;
+  border-radius: 1em;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+
+main .card .content {
+  padding: 1em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+
+main .card .content .description {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+}
+
+main .card .content .description h1 {
+  font-weight: 900;
+  color: #1f2f56;
+}
+
+main .card .content .description p {
+  color: rgba(114, 128, 167, 0.75);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+main .card .content .plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f7ff;
+  border-radius: 1em;
+  width: 100%;
+  padding: 1em;
+}
+
+main .card .content .plan .details {
+  margin-left: 1em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .card .content .plan .details .plan-type {
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+main .card .content .plan .details .price {
+  color: #7280a7;
+}
+
+main .card .content .plan .change {
+  text-decoration: underline;
+  color: #3829e0;
+  cursor: pointer;
+}
+
+main .card .content .plan .change:hover, main .card .content .plan .change:active, main .card .content .plan .change:focus {
+  color: rgba(56, 41, 224, 0.75);
+  text-decoration: none;
+}
+
+main .card .content button {
+  width: 100%;
+  border-radius: 1em;
+  padding-block: 1em;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main .card .content button.payment {
+  background-color: #3829e0;
+  color: white;
+  -webkit-box-shadow: 0 0.75em 0.25em #f5f7ff;
+          box-shadow: 0 0.75em 0.25em #f5f7ff;
+}
+
+main .card .content button.payment:hover, main .card .content button.payment:active, main .card .content button.payment:focus {
+  background-color: rgba(56, 41, 224, 0.75);
+}
+
+main .card .content button.cancel {
+  color: #7280a7;
+  background: none;
+}
+
+main .card .content button.cancel:hover, main .card .content button.cancel:active, main .card .content button.cancel:focus {
+  color: #1f2f56;
+}
+
+@media (min-width: 375px) {
+  main {
+    background-image: url("../img/pattern-background-desktop.svg");
+  }
+  main .card .content {
+    padding: 1em 3em;
+  }
+  main .card .content .plan .details {
+    margin-left: 2em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

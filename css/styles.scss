@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;0,900;1,500&display=swap');
+
+$swMinDesktop: 375px;
+
+$clrWhite: hsl(0, 0, 100%);
+$clrBlack: hsl(0, 0, 0%);
+
+$clrPrimaryPaleBlue: hsl(225, 100%, 94%);
+$clrPrimaryBrightBlue: hsl(245, 75%, 52%);
+$clrPrimaryViolet: rgba($clrPrimaryBrightBlue, .75);
+
+$clrNeutralVeryPaleBlue: hsl(225, 100%, 98%);
+$clrNeutralDesaturatedBlue: hsl(224, 23%, 55%);
+$clrNeutralDarkBlue: hsl(223, 47%, 23%);
+
+$fsParagraph: 16px;
+$fontFamily: 'Red Hat Display', sans-serif;
+
+*,
+*:after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: 100vh;
+    background-color: $clrPrimaryPaleBlue;
+    font-family: $fontFamily;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    padding: 2em;
+    background-image: url("../img/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+
+    .card {
+        max-width: 35em;
+        background-color: $clrWhite;
+        border-radius: 1em;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+
+        .content {
+            padding: 1em 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2em;
+
+            .description {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 2em;
+                
+                h1 {
+                    font-weight: 900;
+                    color: $clrNeutralDarkBlue;
+                }
+
+                p {
+                    color: rgba($clrNeutralDesaturatedBlue, .75);
+                    font-size: $fsParagraph;
+                    font-weight: 700;
+                    line-height: 1.75;
+                }
+            }
+
+            .plan {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: $clrNeutralVeryPaleBlue;
+                border-radius: 1em;
+                width: 100%;
+                padding: 1em;
+
+                .details {
+                    margin-left: 1em;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .plan-type {
+                        color: $clrNeutralDarkBlue;
+                        font-weight: 900;
+                    }
+
+                    .price {
+                        color: $clrNeutralDesaturatedBlue;
+                    }
+                }
+
+                .change {
+                    text-decoration: underline;
+                    color: $clrPrimaryBrightBlue;
+                    cursor: pointer;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $clrPrimaryViolet;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            button {
+                width: 100%;
+                border-radius: 1em;
+                padding-block: 1em;
+                border: none;
+                font-size: 1.25rem;
+                font-weight: 700;
+                cursor: pointer;
+
+                &.payment {
+                    background-color: $clrPrimaryBrightBlue;                    
+                    color: $clrWhite;
+                    box-shadow: 0 .75em .25em $clrNeutralVeryPaleBlue;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background-color: $clrPrimaryViolet;
+                    }
+                }
+
+                &.cancel {
+                    color: $clrNeutralDesaturatedBlue;
+                    background: none;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: $clrNeutralDarkBlue;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: $swMinDesktop) {
+    main {
+        background-image: url("../img/pattern-background-desktop.svg");
+
+        .card {
+            .content {
+
+                padding: 1em 3em;
+
+                .plan {
+                    .details {
+                        margin-left: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
